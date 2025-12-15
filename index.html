@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soluții IT complete pentru afacerea ta - Dezvoltare Web, Securitate și Cloud.">
+    <meta name="author" content="Numele Tau">
+    <title>TechNova - Soluții IT Avansate</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Setări generale și fonturi cu diacritice */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 70px; /* Pentru a nu ascunde conținutul sub meniul fix */
+        }
+
+        /* Navigare */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Carusel personalizat */
+        .carousel-item img {
+            height: 600px;
+            object-fit: cover; /* Imaginile nu se vor deforma */
+            filter: brightness(0.7); /* Întunecăm puțin imaginile pentru a se vedea textul alb */
+        }
+        
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        /* Secțiuni */
+        section {
+            padding: 80px 0;
+        }
+
+        /* Secțiunea Despre (Fundal gri deschis) */
+        #despre {
+            background-color: #f8f9fa;
+        }
+
+        /* Carduri Servicii */
+        .card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .price-tag {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 40px 0;
+        }
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        footer a:hover {
+            color: white;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+
+        /* Scroll fin la apăsarea pe meniu */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-laptop-code me-2"></i>TechNova
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#meniuPrincipal" aria-controls="meniuPrincipal" aria-expanded="false" aria-label="Comutator navigație">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="meniuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Acasă</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#despre">Despre Noi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicii">Servicii & Oferte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proces">Procesul Nostru</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div id="carouselTechCompanie" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselTechCompanie" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselTechCompanie" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselTechCompanie" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselTechCompanie" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselTechCompanie" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Birou modern companie IT">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Inovație Digitală</h5>
+                        <p>Transformăm ideile tale în realitate software.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Echipa de programatori lucrând">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Echipă Dedicată</h5>
+                        <p>Specialiști certificați gata să preia proiectul tău.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Securitate cibernetică și servere">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Securitate Maximă</h5>
+                        <p>Protejăm datele tale cu cele mai noi tehnologii.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Prezentare proiect IT la tablă">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Consultantă IT</h5>
+                        <p>Strategii personalizate pentru creșterea afacerii.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c54be3852f33?auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Laptop și cod sursă">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Dezvoltare Web</h5>
+                        <p>Site-uri rapide, responsive și optimizate SEO.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTechCompanie" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Precedent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTechCompanie" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Următor</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="despre">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="display-5 fw-bold text-primary mb-3">Cine suntem noi?</h2>
+                    <h3 class="h5 text-muted mb-4">Lideri în soluții software din 2015</h3>
+                    <p>
+                        La TechNova, credem că tehnologia trebuie să fie accesibilă și eficientă. Suntem o echipă pasionată de programatori, designeri și experți în securitate cibernetică. 
+                    </p>
+                    <p>
+                        Misiunea noastră este să oferim companiilor din România infrastructura digitală de care au nevoie pentru a excela într-o piață competitivă. Folosim cele mai noi framework-uri și metodologii Agile.
+                    </p>
+                    <a href="#contact" class="btn btn-primary mt-3">Discută cu un consultant</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Echipa TechNova la ședință" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicii">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Serviciile Noastre</h2>
+                <p class="text-muted">Alege pachetul care se potrivește nevoilor tale</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <span class="position-absolute top-0 end-0 badge rounded-pill bg-success m-2">Disponibil imediat</span>
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=60" class="card-img-top" alt="Dezvoltare Web Codare">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Dezvoltare Web</h4>
+                            <p class="card-text flex-grow-1">Creare site-uri de prezentare, magazine online și aplicații web complexe folosind React și Node.js.</p>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Tip: Proiect</span>
+                                <span class="price-tag">500€ <small class="text-muted fs-6">/ start</small></span>
+                            </div>
+                            <a href="#contact" class="btn btn-outline-primary mt-3">Cere Ofertă</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 border-primary">
+                        <span class="position-absolute top-0 end-0 badge rounded-pill bg-danger m-2">Ofertă Specială</span>
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=60" class="card-img-top" alt="Mentenanță IT">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Mentenanță IT & Cloud</h4>
+                            <p class="card-text flex-grow-1">Asigurăm funcționarea continuă a echipamentelor și migrarea datelor în Cloud (AWS/Azure) în siguranță.</p>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Tip: Abonament</span>
+                                <span class="price-tag">50€ <small class="text-muted fs-6">/ oră</small></span>
+                            </div>
+                            <a href="#contact" class="btn btn-primary mt-3">Alege Abonament</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <span class="position-absolute top-0 end-0 badge rounded-pill bg-warning text-dark m-2">Locuri limitate</span>
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&q=60" class="card-img-top" alt="Cursuri programare">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="card-title">Cursuri Programare</h4>
+                            <p class="card-text flex-grow-1">Training-uri pentru angajați în Python, Java sau securitate cibernetică. Certificare inclusă la final.</p>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-muted">Tip: Ședință</span>
+                                <span class="price-tag">100€ <small class="text-muted fs-6">/ cursant</small></span>
+                            </div>
+                            <a href="#contact" class="btn btn-outline-primary mt-3">Înscrie Echipa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proces" class="bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Cum lucrăm?</h2>
+                <p>Procesul nostru simplificat în 4 pași</p>
+            </div>
+            
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-comments fa-3x text-primary mb-3"></i>
+                        <h4 class="h5">1. Analiză</h4>
+                        <p class="small text-muted">Discutăm cerințele tale și stabilim obiectivele clare ale proiectului.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-pencil-ruler fa-3x text-primary mb-3"></i>
+                        <h4 class="h5">2. Design</h4>
+                        <p class="small text-muted">Creăm prototipul vizual și structura logică a aplicației.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                        <h4 class="h5">3. Dezvoltare</h4>
+                        <p class="small text-muted">Scriem cod curat, optimizat și testăm fiecare funcționalitate.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-rocket fa-3x text-primary mb-3"></i>
+                        <h4 class="h5">4. Lansare</h4>
+                        <p class="small text-muted">Publicăm proiectul și oferim suport tehnic post-lansare.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase mb-3 fw-bold text-primary">TechNova</h5>
+                    <p>Partenerul tău de încredere în transformarea digitală. Oferim servicii premium pentru companii mici și mijlocii.</p>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase mb-3 fw-bold">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Str. Programatorilor, Nr. 10, București</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +40 722 123 456</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@technova.ro</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4 text-center text-md-start">
+                    <h5 class="text-uppercase mb-3 fw-bold">Urmărește-ne</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 TechNova Solutions. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
